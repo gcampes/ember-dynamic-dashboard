@@ -10,7 +10,6 @@ export default Ember.Controller.extend({
       let component = {
         'name': 'metric-card',
         'options': {
-          'order': '5',
           'number': Math.ceil(Math.random()*100),
           'string': Math.random() > 0.5 ? 'Foo bar' : 'Bar foo'
         }
@@ -22,7 +21,8 @@ export default Ember.Controller.extend({
       let component = {
         'name': 'information-card',
         'options': {
-          'title': 'Some information',
+          'order': '1',
+          'title': 'Some information 1',
           'info': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
       }
@@ -32,8 +32,8 @@ export default Ember.Controller.extend({
     let listOfComponents = [metricCard(), metricCard(), informationCard(), metricCard()];
 
     this.dashboard.addComponents(listOfComponents);
-    setInterval(()=>{
-      this.dashboard.addComponent(metricCard());
-    }, 5000);
+    // setInterval(()=>{
+    //   this.dashboard.addComponent(metricCard());
+    // }, 5000);
   }
 });

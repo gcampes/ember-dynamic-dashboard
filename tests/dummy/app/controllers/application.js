@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
         'name': 'information-card',
         'options': {
           'order': '5',
-          'title': 'Some information',
+          'title': 'Some information 2',
           'info': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
       }

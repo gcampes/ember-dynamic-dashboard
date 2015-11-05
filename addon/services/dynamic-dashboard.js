@@ -8,6 +8,7 @@ export default Ember.Service.extend({
   components: Ember.computed.alias('sortedComponents'),
 
   sortProperties: ['options.order:asc'],
+
   sortedComponents : Ember.computed.sort('rawComponents', 'sortProperties'),
 
   rawComponents : A([]),
@@ -17,14 +18,14 @@ export default Ember.Service.extend({
   },
 
   addComponents(componentList){
-    for(let key in componentList){
-      this.addComponent(componentList[key]);
+    for(let i = 0; i < componentList.length; i++){
+      this.get('rawComponents').pushObject(componentList[i]);
     }
   },
 
   changeSortProperties(sortProperties){
     this.set('sortProperties', sortProperties);
-  }
+  },
 
   clear(){
     this.set('rawComponents', A([]));

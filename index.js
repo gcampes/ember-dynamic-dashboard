@@ -2,5 +2,11 @@
 'use strict';
 
 module.exports = {
-  name: 'dynamic-dashboard'
+  name: 'dynamic-dashboard',
+
+  included: function (app) {
+      this._super.included(app);
+
+      app.import('vendor/dynamic-dashboard.css');
+  }
 };
