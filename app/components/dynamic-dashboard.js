@@ -1,0 +1,1 @@
+export { default } from 'dynamic-dashboard/components/dynamic-dashboard';
