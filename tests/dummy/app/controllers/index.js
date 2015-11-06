@@ -1,9 +1,5 @@
 import Ember from 'ember';
 
-const {
-  A,
-} = Ember;
-
 export default Ember.Controller.extend({
   init(){
     let metricCard = function(){
@@ -13,7 +9,7 @@ export default Ember.Controller.extend({
           'number': Math.ceil(Math.random()*100),
           'string': Math.random() > 0.5 ? 'Foo bar' : 'Bar foo'
         }
-      }
+      };
       return component;
     };
 
@@ -25,7 +21,7 @@ export default Ember.Controller.extend({
           'title': 'Some information 1',
           'info': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
-      }
+      };
       return component;
     };
 

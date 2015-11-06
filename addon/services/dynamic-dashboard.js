@@ -11,7 +11,7 @@ export default Ember.Service.extend({
 
   sortedComponents : Ember.computed.sort('rawComponents', 'sortProperties'),
 
-  rawComponents : A([]),
+  rawComponents : new A([]),
 
   addComponent(component){
     this.get('rawComponents').pushObject(component);
@@ -28,6 +28,6 @@ export default Ember.Service.extend({
   },
 
   clear(){
-    this.set('rawComponents', A([]));
+    this.set('rawComponents', new A([]));
   }
 });

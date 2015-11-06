@@ -10,10 +10,10 @@ export default Ember.Controller.extend({
           'title': 'Some information 2',
           'info': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         }
-      }
+      };
       return component;
     };
 
     this.dashboard.addComponent(informationCard());
   }
-})
+});
